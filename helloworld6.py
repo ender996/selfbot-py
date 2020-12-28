@@ -147,13 +147,13 @@ helpMessage ="""╔═══════════
 
 family =""" ✇✇  DLG FAMILY  ✇✇
 ════════════
-══  DL.    ═  K119 ══ 
+══  DL.    ═  K346 ══ 
 ══  D@L  ═  K480 ══
 ══  dl8    ═  K41 ══
 ══  dDL   ═  K458 ══
-══  DL^    ═  K583 ══
+══  DL^    ═  K346 ══
 ══  DLD   ═  K119 ═
-══  pdl     ═  K517 ══
+══  pdl     ═  K346 ══
 ══  wDL   ═  K517 ══
 ══  DlL     ═  K488 ══
 ════════════
@@ -208,7 +208,7 @@ All donations go to DLG family, tech support, and Youtube staff.
 Owned by HBO/Richard Owen
 """
 
-
+translator = Translate()
 
 def restartProgram():
     print ('##----- PROGRAM RESTARTED -----##')
@@ -771,6 +771,10 @@ def executeOp(op):
                     line.sendMessage(msg.to,tech)
                 elif '/games' in text.lower():
                     line.sendMessage(msg.to,games)
+                elif '/translate' in text.lower():
+                    textt = text[11:]
+                    transtext = translator.translate(textt)
+                    line.sendMessage(msg.to,transtext)
                 elif "Gmid @" in msg.text:
                     if 'MENTION' in msg.contentMetadata.keys() != None:
                         names = re.findall(r'@(\w+)', msg.text)
