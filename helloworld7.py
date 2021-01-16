@@ -629,7 +629,7 @@ def executeOp(op):
                     line.sendMessage(msg.to,helpMessage)
                 elif '/gmid' in text.lower():
                     gid = line.getGroup(to)
-                    line.sendMessage(msg.to,gid)
+                    line.sendMessage(msg.to,gid.id)
                 elif '/calendar' in text.lower():
                     line.sendImage(msg.to,"/home/pi/selfbot-py/calendar.jpg")
                 elif '/cancelall' in text.lower():
