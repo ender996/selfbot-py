@@ -25,7 +25,7 @@
     "checkContact": false,
     "checkPost": false,
     "checkSticker": false,
-    "defaultReplyReader" : "Hello @!, come here join to chat",
+    "defaultReplyReader": "Hello @!, come here join to chat",
     "greet": {
         "join": {
             "status": false,
@@ -37,9 +37,9 @@
         }
     },
     "myProfile": {
-        "coverId": "",
-        "displayName": "",
-        "pictureStatus": "",
+        "coverId": "c0000000000000000000000000000001",
+        "displayName": "DL. Bot",
+        "pictureStatus": "0hF7ZYY4vRGRhnIDPYGRZmT1tlF3UQDh9QH0FfLREoQC8fFQ5ODxVVdxUkRS9OFFxGUhJXdkVwEilD",
         "statusMessage": ""
     },
     "mimic": {
@@ -51,6 +51,6 @@
         "status": true,
         "key": "."
     },
-    "copyright": "If you respect the author please don't remove this copyright\n© 2018 Hello World",
+    "copyright": "If you respect the author please don't remove this copyright\n\u00a9 2018 Hello World",
     "author_lineid": "You can add the author by line id, https://line.me/ti/p/~zero-cool404"
 }

@@ -1,104 +1,44 @@
-# LINE Python
+# ![logo](/examples/assets/LINE-sm.png) LINE Python
+
+ [![Version 3.0.8](https://img.shields.io/badge/beta-3.0.8-brightgreen.svg "Version 3.0.8")](https://pypi.python.org/pypi/linepy) [![LICENSE](https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg "LICENSE")](https://github.com/fadhiilrachman/line-py/blob/master/LICENSE) [![Supported python versions: 3.x](https://img.shields.io/badge/python-3.x-green.svg "Supported python versions: 3.x")](https://www.python.org/downloads/) [![Chat on Discord](https://discordapp.com/api/guilds/370888828489170956/widget.png "Chat on Discord")](https://discord.gg/JAA2uk6)
 
 *LINE Messaging's private API*
 
 ----
 
-## Important
-First things you have to do is, clone this repository [linepy-modified](https://github.com/crash-override404/linepy-modified)
-and then you must to copy linepy folders, after all installation complete. Paste linepy folders to folder selfbot-py.  
-Please do not sell or rent this source code, because this is just for learning.
+## Requirement
 
-## Installation for Termux
+The linepy module only requires Python 3. You can download from [here](https://www.python.org/downloads/). 
 
+## Installation
+
+Installation is simple. It can be installed from pip using the following command:
 ```sh
-$ apt update
-$ apt upgrade
-$ apt install python
-$ apt install git
-$ git clone https://github.com/crash-override404/selfbot-py
-$ cd selfbot-py
-$ python -m pip install -r requirements.txt
-$ python helloworld.py -a IOSIPAD
+$ pip install linepy
+```
+Or from the code:
+```sh
+$ python setup.py install
 ```
 
-## Installation for VPS
+## Usage
 
-```sh
-$ git clone https://github.com/crash-override404/selfbot-py
-$ cd selfbot-py
-$ python3 -m pip install -r requirements.txt
-$ python3 helloworld.py -a IOSIPAD
-```
-
-## Usage for V2
-To register command you can use hook.command
 ```python
-@hook.command
-def something(*args, **kwargs):
-    to = kwargs.get('to', None)
-    line.sendMessage(to, 'Something command called')
+>>> from linepy import *
+>>> line = LINE('EMAIL', 'PASSWORD')
+>>> line.log("Auth Token : " + str(line.authToken))
 ```
 
-You can use the optional for hook.command
-* *alt*  
-   Alternative command for one function  
-   Type : tuple, Default : ()
-* *title*  
-   Make command name title in help message (not used when name is set)  
-   Type : bool, Default : True
-* *cmd_args*  
-   Additional arguments for using this function (use this with prefix)  
-   Type : list, Default : []
-* *head*  
-   Set this function will stored where in help message (if None will stored at first section)  
-   Type : str, Default : None
-* *name*  
-   Set name displayed in help message  
-   Type : str, Default : None
-* *users*  
-   Set users permission to use this command  
-   Type : list, Default : ['ALL']
-* *groups*  
-   Set groups permission to use this command  
-   Type : list, Default : ['ALL']
-* *permissions*  
-   Set permissions to use this command  
-   Type : list, Default : ['ALL']
-* *inpart*  
-   Set if you want call this command if anything in text contains command name or alt  
-   Type : bool, Default : False
-* *prefix*  
-   Set if you want call this command if text prefix in command name or alt  
-   Type : bool, Default : False
-* *usecmd*  
-   Set if you want call this command only if cmd used  
-   Type : bool, Default : True
-* *register*  
-   Set if you want register this command to help message  
-   Type : bool, Default : True
-* *defer*  
-   Set a lambda function to defer for execute after command executed  
-   Type : lambda, Default : None
+### Examples
 
+All examples can be found [here](https://github.com/fadhiilrachman/line-py/tree/master/examples).
 
-## LINE Square
-[HelloWorld Square](https://line.me/ti/g2/JGUODBE4RE)
+## Updates
 
-## Discord
-[HelloWorld](https://discord.gg/5jqbutB)
+From pip using the following command:
+```sh
+$ pip install linepy --upgrade
+```
 
 ## Author
-Zero Cool / [@crash-override404](https://github.com/crash-override404)  
-Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)  
-Alin / [@muhmursalind](https://github.com/muhmursalind)
-
-## Support
-All Hello World Members :  
-Tanduri a.k.a HelloTan / [@hellotan](https://github.com/hellotan)  
-Fauzan Ardhana / [@fauzanardh](https://github.com/fauzanardh)  
-Moe Poi ~ / [@moepoi](https://github.com/moepoi)  
-Muhammad Fahri / [@FAHRIZTX](https://github.com/FAHRIZTX)  
-Dosugamea / [@Dosugamea](https://github.com/Dosugamea)  
-Dzin / [@dzingans](https://github.com/dzingans)  
-And others.
+Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)
