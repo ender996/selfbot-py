@@ -614,6 +614,7 @@ def executeOp(op):
             setKey   = settings['setKey']['key'] if settings['setKey']['status'] else ''
             if msg.toType == 2:
                 if 'tagall' in text.lower():
+                    gid = line.getGroup(to)
                     members = []
                     if msg.toType == 1:
                         room = line.getCompactRoom(to)
@@ -623,7 +624,7 @@ def executeOp(op):
                         members = [mem.mid for mem in group.members]
                     else:
                         return line.sendMessage(to, 'Failed mentionall members, use this command only on room or group chat')
-                    if members and op.param1 != "c431a52f1131ba1d01ce91ada4bede4ba":
+                    if members and gid.id != "c431a52f1131ba1d01ce91ada4bede4ba":
                         mentionMembers(to, members)
                 elif '/help' in text.lower():
                     line.sendMessage(msg.to,helpMessage)
