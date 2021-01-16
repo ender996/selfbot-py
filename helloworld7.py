@@ -623,7 +623,7 @@ def executeOp(op):
                         members = [mem.mid for mem in group.members]
                     else:
                         return line.sendMessage(to, 'Failed mentionall members, use this command only on room or group chat')
-                    if members:
+                    if members and op.param1 != "c431a52f1131ba1d01ce91ada4bede4ba":
                         mentionMembers(to, members)
                 elif '/help' in text.lower():
                     line.sendMessage(msg.to,helpMessage)
